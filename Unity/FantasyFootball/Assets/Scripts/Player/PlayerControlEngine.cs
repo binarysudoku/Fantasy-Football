@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerControlEngine : MonoBehaviour {
 
+    public PlayerMovementEngine playerMovement;
+
 	// Use this for initialization
 	void Start () {
 		
