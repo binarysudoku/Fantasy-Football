@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: facb7ccf09f67a14c808096419493ef8
-timeCreated: 1525126475
+guid: 39f6585267b37ef418c873307af4b191
+timeCreated: 1525126406
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,8 @@ ModelImporter:
     2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Hat_Fancy_01
+    4300000: Hat_Wizard_02
+    4300002: Hat_WideBrim
   externalObjects: {}
   materials:
     importMaterials: 0

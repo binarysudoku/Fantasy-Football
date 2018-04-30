@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: eea86c3441937114a8b16c4de7b0df13
-timeCreated: 1525114031
+guid: facb7ccf09f67a14c808096419493ef8
+timeCreated: 1525126475
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,8 +10,8 @@ ModelImporter:
     2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCube3
-    4300002: Hat_Wizard_01
+    4300000: Hat_Fancy_01
+    4300002: Hat_Bow
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -67,7 +67,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
