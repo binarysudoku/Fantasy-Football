@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControlEngine : MonoBehaviour {
-
+public class PlayerControlEngine : MonoBehaviour
+{
 	// Use this for initialization
 	void Start () {
 		
