@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-<<<<<<< HEAD
 public class PlayerCameraEngine : MonoBehaviour
 {
 
@@ -49,19 +48,3 @@ public class PlayerCameraEngine : MonoBehaviour
         targetPos = playerRoot.transform.position;
     }
 }
-=======
-namespace Player.CameraEngine
-
-public class PlayerCameraEngine : MonoBehaviour 
-{
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-}
->>>>>>> Develop

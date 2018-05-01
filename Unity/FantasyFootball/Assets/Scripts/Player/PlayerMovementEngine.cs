@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Player.MovementEngine
-
 public class PlayerMovementEngine : MonoBehaviour 
 {
 	// Use this for initialization
