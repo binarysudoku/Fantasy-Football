@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCameraEngine : MonoBehaviour {
+namespace Player.CameraEngine
 
+public class PlayerCameraEngine : MonoBehaviour 
+{
 	// Use this for initialization
 	void Start () {
 		
