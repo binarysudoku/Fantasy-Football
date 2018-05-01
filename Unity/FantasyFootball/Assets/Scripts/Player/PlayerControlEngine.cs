@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControlEngine : MonoBehaviour {
+namespace Player.ControlEngine
 
+<<<<<<< HEAD
     public PlayerMovementEngine playerMovement;
 
+=======
+public class PlayerControlEngine : MonoBehaviour 
+{
+>>>>>>> Develop
 	// Use this for initialization
 	void Start () {
 		
