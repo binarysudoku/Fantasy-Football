@@ -134,7 +134,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1625015926697808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.19, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4318290757414974}
@@ -205,7 +205,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907134415312012}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.4000831, z: 0}
+  m_LocalPosition: {x: 0, y: 1.008, z: 0}
   m_LocalScale: {x: 2.4819164, y: 2.2646315, z: 2.4819162}
   m_Children: []
   m_Father: {fileID: 4228354004472324}
@@ -334,7 +334,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907134415312012}
-  m_Mesh: {fileID: 4300002, guid: eea86c3441937114a8b16c4de7b0df13, type: 3}
+  m_Mesh: {fileID: 4300004, guid: eea86c3441937114a8b16c4de7b0df13, type: 3}
 --- !u!33 &33357805335874698
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -385,7 +385,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3a5561045badb4c8aca58e79f4c6b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 114373432814767154}
 --- !u!114 &114448026932481362
 MonoBehaviour:
   m_ObjectHideFlags: 1

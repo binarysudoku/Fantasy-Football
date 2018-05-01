@@ -275,7 +275,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4989022995965254, guid: 28f89ff9444177f4f947ea4e0e32cb9e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4989022995965254, guid: 28f89ff9444177f4f947ea4e0e32cb9e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -317,7 +317,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4014909384065798, guid: 284f7e7fb910ba14e9053fbe283a5d87, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.16
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4014909384065798, guid: 284f7e7fb910ba14e9053fbe283a5d87, type: 2}
       propertyPath: m_LocalPosition.y
@@ -351,12 +351,12 @@ Prefab:
       propertyPath: m_Name
       value: PlayerAvatar_Sim (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 23233099355904628, guid: 284f7e7fb910ba14e9053fbe283a5d87,
+    - target: {fileID: 23335816988965130, guid: 284f7e7fb910ba14e9053fbe283a5d87,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a6fd0fe3aa234d144884538c820c61aa, type: 2}
-    - target: {fileID: 23335816988965130, guid: 284f7e7fb910ba14e9053fbe283a5d87,
+    - target: {fileID: 23233099355904628, guid: 284f7e7fb910ba14e9053fbe283a5d87,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -469,7 +469,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4014909384065798, guid: 284f7e7fb910ba14e9053fbe283a5d87, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.19
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4014909384065798, guid: 284f7e7fb910ba14e9053fbe283a5d87, type: 2}
       propertyPath: m_LocalPosition.y
