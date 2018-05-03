@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-<<<<<<< HEAD
 public class PlayerMovementEngine : MonoBehaviour
-=======
-public class PlayerMovementEngine : MonoBehaviour 
->>>>>>> master
 {
     private Rigidbody movementRoot; //rigidbody that handles all player movement
     

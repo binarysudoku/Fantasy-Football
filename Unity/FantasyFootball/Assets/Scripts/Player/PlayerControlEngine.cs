@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-<<<<<<< HEAD
-public class PlayerControlEngine : MonoBehaviour
-=======
 public class PlayerControlEngine : MonoBehaviour 
->>>>>>> master
+
 {
     //this sucks, will need to be improved when we know what we're doing
     public GameObject[] spellBook = new GameObject[4]; //contains the spell prefabs the player can use within the match
