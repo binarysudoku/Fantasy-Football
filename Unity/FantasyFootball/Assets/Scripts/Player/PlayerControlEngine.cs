@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class PlayerControlEngine : MonoBehaviour 
 {
+    enum State { Running, Channeling, Kicking, Stunned, Airborne };
+
     public PlayerCameraEngine cameraEngine;
     public PlayerMovementEngine movementEngine;
 
-    public GameObject controlledBall;
-    
-    //this sucks, will need to be improved when we know what we're doing
-    public GameObject[] spellBook = new GameObject[4]; //contains the spell prefabs the player can use within the match
-
     private bool useGamepad; //should be changed when receiving input from a gamepad / mouse
+
+    public bool inputEnabled;
+    State currentState;
+    public GameObject controlledBall; //null is no ball
     
     private Vector3 mouseWorldPosition;
 
@@ -28,19 +29,32 @@ public class PlayerControlEngine : MonoBehaviour
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit, layer_mask))
+        if (Physics.Raycast(ray, out hit, 1000, layer_mask.value))
         {
             Transform objectHit = hit.transform;
-
-            // Do something with the object that was hit by the raycast.
             mouseWorldPosition = hit.point;
         }
 
-        Debug.DrawRay(ray.origin, ray.direction * 16, Color.yellow);
+            Debug.DrawRay(ray.origin, ray.direction * 32, Color.yellow);
         
-        Debug.DrawRay(mouseWorldPosition, Vector3.up*10, Color.yellow);
+            Debug.DrawRay(mouseWorldPosition, Vector3.up*10, Color.yellow);
 
-        movementEngine.moveInput.x = -Input.GetAxis("Horizontal");
-        movementEngine.moveInput.z = Input.GetAxis("Vertical");
+        movementEngine.moveInput.x = Input.GetAxisRaw("Horizontal");
+        movementEngine.moveInput.z = -Input.GetAxisRaw("Vertical");
+        movementEngine.moveInput.Normalize();
+        
+        Vector3 vec = mouseWorldPosition - movementEngine.movementRoot.transform.position;
+
+        movementEngine.aimTarget = mouseWorldPosition;
+    }
+
+    void CheckIsGrounded()
+    {
+        //Physics.Linecast
+    }
+
+    void Kick(float power)
+    {
+        
     }
 }

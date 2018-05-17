@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 20574539307125482}
   - component: {fileID: 124855420725085318}
   - component: {fileID: 81930198893081294}
+  - component: {fileID: 114766047617672964}
   m_Layer: 0
   m_Name: Main_Camera
   m_TagString: MainCamera
@@ -54,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4014909384065798}
   - component: {fileID: 114381599438947428}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerAvatar_Sim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +72,7 @@ GameObject:
   - component: {fileID: 4318290757414974}
   - component: {fileID: 114373432814767154}
   - component: {fileID: 54260541191416368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player_Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +89,7 @@ GameObject:
   - component: {fileID: 4228354004472324}
   - component: {fileID: 33357805335874698}
   - component: {fileID: 23335816988965130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerPlaceholder_DELETELATER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4028607438780190}
   - component: {fileID: 64856756933936952}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player_COL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +122,7 @@ GameObject:
   - component: {fileID: 4469986214720582}
   - component: {fileID: 33258022401693442}
   - component: {fileID: 23233099355904628}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hat_Wizard_01_DELETELATER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,8 +177,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1658819578610178}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.000019685916, y: -0.71734434, z: -0.000020268877, w: 0.6967189}
+  m_LocalPosition: {x: -1.5276186, y: -0.0018677711, z: -13.956287}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4228354004472324}
@@ -191,8 +192,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1419496328149658}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.000000021855694, y: 0.8660254, z: 0.5, w: -0.000000037855173}
+  m_LocalPosition: {x: -1.5276179, y: -0.0018656229, z: -13.95629}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4711967278934026}
@@ -219,7 +220,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1288739966912018}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 15}
+  m_LocalPosition: {x: 0, y: 0, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4365795078409058}
@@ -353,7 +354,7 @@ Rigidbody:
   m_GameObject: {fileID: 1658819578610178}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 2
+  m_Drag: 4
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -396,9 +397,11 @@ MonoBehaviour:
   playerMass: 1
   playerVelocity: 0
   playerAngular: 0
-  moveSpeed: 5
+  moveSpeed: 6
   moveInput: {x: 0, y: 0, z: 0}
-  aimAcceleration: 0
+  aimAcceleration: 18
+  aimTarget: {x: -19.599321, y: 1.0698469e-16, z: -14.454486}
+  movementRoot: {fileID: 54260541191416368}
 --- !u!114 &114381599438947428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -412,11 +415,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraEngine: {fileID: 114448026932481362}
   movementEngine: {fileID: 114373432814767154}
-  spellBook:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  inputEnabled: 0
+  controlledBall: {fileID: 0}
   layer_mask:
     serializedVersion: 2
     m_Bits: 256
@@ -438,6 +438,63 @@ MonoBehaviour:
   aimOffsetDistance: 4
   cameraAngle: {x: -60, y: 180, z: 0}
   defaultOffset: {x: 0, y: 0, z: 20}
+--- !u!114 &114766047617672964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288739966912018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 4711967278934026}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  stopNaNPropagation: 1
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!124 &124855420725085318
 Behaviour:
   m_ObjectHideFlags: 1
