@@ -10,8 +10,6 @@ public class PlayerMovementEngine : MonoBehaviour
     public float playerVelocity = 0;
     public float playerAngular = 0;
 
-    private bool isGrounded = true;
-
     [Header("Movement")]
     public float moveSpeed;
 
@@ -19,7 +17,6 @@ public class PlayerMovementEngine : MonoBehaviour
 
     [Header("Turning")]
     public float aimAcceleration;
-    private float aimAngle = 0;
 
     public Vector3 aimTarget = new Vector3(0,0,0);
 
@@ -69,5 +66,10 @@ public class PlayerMovementEngine : MonoBehaviour
     public void AdjustPhysicsTimescale()
     {
         
+    }
+
+    void Kick(Ball ball, float power)
+    {
+        ball.rb.AddForce(movementRoot.transform.forward * power);
     }
 }
